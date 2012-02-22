@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Micah Chalmer"]
   s.email       = ["micah@micahchalmer.net"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Nesta plugin "Foldable"}
+  s.description = %q{Place a "fold" in a Nesta article and have the summary automatically set to the part of the body content that comes before it.}
 
   s.rubyforge_project = "nesta-plugin-foldable"
 
