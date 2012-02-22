@@ -1,0 +1,22 @@
+# "Foldable" plugin for Nesta CMS
+
+In Nesta, the summary of an article (what appears on home or category pages) is specified in metadata, independently of the article's body.  That's nice if you want it to be independent, but what if you really do want the summary to be the same as the beginning of the article?  It's annoying to have to repeat it twice, especially if has formatting or more than just a simple paragraph.
+
+This plugin allows you to place a `~~fold~~` in your content, and will set the summary automatically to the body content that comes before it (not including the heading.)  For instance, you could have an article like this:
+
+    Date: February 21, 2012
+    
+    # My Awesome Article
+    
+    This paragraph is included in the summary
+    
+    * So is this
+    * and this
+    
+    <!-- ~~fold ~~ -->
+    
+    But this part is not in the summary.
+
+The plugin makes no attempt to remove the `~~fold~~` from the body's content.  Wrap it in an HTML comment so that it doesn't show on your body page.  The summary will include everything up to, but not including, the line containing `~~fold~~`, so the summary won't include the `<!--` at the start of the line.
+
+Setting the summary via metadata will still work as normal.  If your page has both a `~~fold~~` and a summary set in metadata, the metadata wins and the `~~fold~~` is ignored.
