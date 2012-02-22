@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Nesta::Plugin::Foldable::VERSION
   s.authors     = ["Micah Chalmer"]
   s.email       = ["micah@micahchalmer.net"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/MicahChalmer/nesta-plugin-foldable"
   s.summary     = %q{Nesta plugin "Foldable"}
   s.description = %q{Place a "fold" in a Nesta article and have the summary automatically set to the part of the body content that comes before it.}
 
