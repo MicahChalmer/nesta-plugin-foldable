@@ -30,13 +30,9 @@ module Nesta
         end
 
       if body_text.include? '~~fold~~'
-        $stderr.puts body_text
         summary_text = body_text.sub(/^[^\n]*~~fold~~.*\Z/m, '');
-        x = convert_to_html(@format, nil, summary_text)
-        $stderr.puts "Summary: #{x}"
-        x
+        convert_to_html(@format, nil, summary_text)
       else
-        $stderr.puts "#{heading}: no fold here"
         nil
       end
     end
