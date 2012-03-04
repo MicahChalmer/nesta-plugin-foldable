@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", '1.3.0'
   s.add_development_dependency "ruby-debug"
-  s.add_dependency("nesta", ">= 0.9.11")
+  s.add_dependency("nesta", ">= 0.9.13")
   s.add_development_dependency("rake")
   s.add_development_dependency('test-unit', '1.2.3')
 end

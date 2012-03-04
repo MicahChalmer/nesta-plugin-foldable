@@ -16,21 +16,11 @@ module Nesta
     def summary
       result = pre_fold_summary
       return result if result && !result.empty?
-      
-      # Sigh...it's a shame I had to copy-paste this
-      # from nesta's models.rb just to get rid of the
-      # heading.
-      body_text = case @format
-        when :mdown
-          markup.sub(/^#[^#].*$\r?\n(\r?\n)?/, '')
-        when :haml
-          markup.sub(/^\s*%h1\s+.*$\r?\n(\r?\n)?/, '')
-        when :textile
-          markup.sub(/^\s*h1\.\s+.*$\r?\n(\r?\n)?/, '')
-        end
 
-      if body_text.include? '~~fold~~'
-        summary_text = body_text.sub(/^[^\n]*~~fold~~.*\Z/m, '');
+      body_markup_text = body_markup
+
+      if body_markup_text.include? '~~fold~~'
+        summary_text = body_markup_text.sub(/^[^\n]*~~fold~~.*\Z/m, '');
         convert_to_html(@format, nil, summary_text)
       else
         nil
