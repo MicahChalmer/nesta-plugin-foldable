@@ -1,0 +1,10 @@
+Date: 2012-02-28
+Summary: "Meta summary"
+
+# Test Page Heading
+
+Not in the summary
+
+<!-- ~~fold~~ -->
+
+Out of the summary

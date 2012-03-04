@@ -1,0 +1,9 @@
+Date: 2012-02-28
+
+# Test Page Heading
+
+In the summary
+
+<!-- ~~fold~~ -->
+
+Out of the summary

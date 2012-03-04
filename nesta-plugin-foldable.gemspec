@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "rspec", '1.3.0'
+  s.add_development_dependency "ruby-debug"
   s.add_dependency("nesta", ">= 0.9.11")
   s.add_development_dependency("rake")
+  s.add_development_dependency('test-unit', '1.2.3')
 end
