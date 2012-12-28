@@ -2,7 +2,6 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'nesta/env'
-require 'ruby-debug'
 Nesta::Env.root = File.expand_path('./foldable-plugin-test-nesta-site', File.dirname(__FILE__))
 
 # Nesta requires the current dir to be the root
